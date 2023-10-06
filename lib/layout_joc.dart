@@ -22,17 +22,20 @@ class LayoutJoc extends StatelessWidget {
           // Ocupar la meitat inferior de l'espai amb els textos
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.4,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("${itemData['nom']}",style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 10),
-                Text(itemData['any'].toString()),
-                const SizedBox(height: 10),
-                Text("${itemData['tipus']}",style: const TextStyle(fontWeight: FontWeight.bold),),
-                const SizedBox(height: 10),
-                Text("${itemData['descripcio']}",textAlign: TextAlign.justify,),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("${itemData['nom']}",style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                  const SizedBox(height: 10),
+                  Text(itemData['any'].toString()),
+                  const SizedBox(height: 10),
+                  Text("${itemData['tipus']}",style: const TextStyle(fontWeight: FontWeight.bold),),
+                  const SizedBox(height: 10),
+                  Text("${itemData['descripcio']}",textAlign: TextAlign.justify,),
+                ],
+              ),
             ),
           ),
         ],
